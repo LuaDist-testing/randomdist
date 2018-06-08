@@ -42,6 +42,10 @@ mt.__index = function (t, n)
   return rawget(t, n)
 end
 
+-- DataDumper uses loadstring(), but 5.2 has load() instead ...
+-- though loadstring survives as a synonym.
+if load and not loadstring then loadstring = load end
+
 
 ----------------------------- tests -------------------------
 local n = nil
@@ -103,8 +107,6 @@ if not ok(t_dump == 'return { Fred="23", Gina="21" }', 'table') then
 	print('t_dump = '..tostring(t_dump))
 end
 
--- DataDumper uses loadstring(), but 5.2 has load() instead ...
--- though loadstring survives as a synonym.
 X = 3  -- global
 local f = function() X = 4 end
 local f_dump = DataDumper(f, 'varn', true, 3)

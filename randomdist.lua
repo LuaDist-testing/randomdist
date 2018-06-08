@@ -27,8 +27,8 @@
 -- http://linkage.rockefeller.edu/wli/1fnoise    -- no longer there :-(
 
 local M = {} -- public interface
-M.Version = '1.2'
-M.VersionDate = '19aug2017'
+M.Version = '1.3'
+M.VersionDate = '26dec2017'
 
 ------------------------------ private ------------------------------
 function warn(...)
@@ -106,7 +106,7 @@ end
 function M.randomgetn(arr_in, n)
 	local arr = {}
 	for i = 1,#arr_in do arr[i] = arr_in[i] end
-	if n >= #arr then return arr end
+	if n > #arr then return arr end  -- 1.3 allows n==#arr meaning shuffle
 	local arr_out = {}
 	for i = 1,n do
 		local j = math.random(#arr)
