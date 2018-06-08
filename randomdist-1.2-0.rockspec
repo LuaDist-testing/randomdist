@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "randomdist"
-version = "1.0-0"
+version = "1.2-0"
 -- LuaDist source
 source = {
-  tag = "1.0-0",
+  tag = "1.2-0",
   url = "git://github.com/LuaDist-testing/randomdist.git"
 }
 -- Original source
 -- source = {
---    url = "http://www.pjb.com.au/comp/lua/randomdist-1.0.tar.gz",
---    md5 = "d0bd4338578a19fc5d081875b68dbed4"
+--    url = "http://www.pjb.com.au/comp/lua/randomdist-1.2.tar.gz",
+--    md5 = "f110306072bff87d303b873bf83f40b0"
 -- }
 description = {
    summary = "a few simple procedures for generating random numbers.",
